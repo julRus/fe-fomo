@@ -96,7 +96,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 30,
     fontWeight: "100",
-    fontFamily: "sans-serif-light",
     padding: 0,
     marginVertical: 20,
     textAlign: "center"
