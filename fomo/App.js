@@ -7,6 +7,11 @@ import HomeScreen from "./Screens/HomePage";
 import SignUp from "./Screens/SignUp";
 
 class Home extends React.Component {
+  static navigationOptions = {
+    headerStyle: { backgroundColor: "black" },
+    headerTitleStyle: { color: "white" }
+  };
+
   render() {
     return (
       <View style={styles.container}>
