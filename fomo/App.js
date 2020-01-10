@@ -17,11 +17,7 @@ class Home extends React.Component {
           }}
           source={require("./assets/bg.jpg")}
         >
-          <Button
-            title="Go To Screen 2"
-            onPress={() => this.props.navigation.navigate("Other")}
-          />
-          <HomeScreen />
+          <HomeScreen navigator={this.props.navigation.navigate} />
         </ImageBackground>
       </View>
     );
@@ -30,7 +26,7 @@ class Home extends React.Component {
 
 const RootStack = createStackNavigator({
   Home: Home,
-  Other: Screen2
+  SignUp: SignUp
 });
 
 const AppContainer = createAppContainer(RootStack);

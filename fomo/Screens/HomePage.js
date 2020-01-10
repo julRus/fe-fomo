@@ -29,6 +29,10 @@ export default function HomeScreen(props) {
     setEnteredUsername(""), setEnteredPassword("");
   };
 
+  const goToSignInPage = () => {
+    props.navigator("SignUp");
+  };
+
   return (
     <View style={StyleSheet.container}>
       <Text style={styles.logo}>FOMO</Text>
@@ -55,7 +59,9 @@ export default function HomeScreen(props) {
       </View>
       <Text style={styles.title}>New to FOMO?</Text>
       <TouchableOpacity style={styles.buttonContainer}>
-        <Text style={styles.button}>Sign Up</Text>
+        <Text style={styles.button} onPress={goToSignInPage}>
+          Sign Up
+        </Text>
       </TouchableOpacity>
     </View>
   );
@@ -64,7 +70,7 @@ export default function HomeScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    opacity: 0.9
+    opacity: 1
   },
 
   logo: {
