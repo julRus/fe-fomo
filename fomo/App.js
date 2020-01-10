@@ -4,7 +4,7 @@ import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
 import HomeScreen from "./Screens/HomePage";
-import Screen2 from "./Screens/Screen2";
+import SignUp from "./Screens/SignUp";
 
 class Home extends React.Component {
   render() {
