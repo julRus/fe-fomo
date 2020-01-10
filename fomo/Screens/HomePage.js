@@ -8,6 +8,8 @@ import {
   Alert
 } from "react-native";
 
+import Quiz from "./Components/Quiz";
+
 export default function HomeScreen(props) {
   const [enteredUsername, setEnteredUsername] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
@@ -15,6 +17,8 @@ export default function HomeScreen(props) {
     username: "",
     password: ""
   });
+
+  const [viewModal, setViewModal] = useState(false);
 
   const handleTextChangeUsername = enteredText => {
     setEnteredUsername(enteredText);
@@ -27,6 +31,7 @@ export default function HomeScreen(props) {
   const authenticateUser = () => {
     setAuthDetails({ username: enteredUsername, password: enteredPassword });
     setEnteredUsername(""), setEnteredPassword("");
+    setViewModal(true);
   };
 
   const goToSignInPage = () => {
@@ -35,6 +40,7 @@ export default function HomeScreen(props) {
 
   return (
     <View style={StyleSheet.container}>
+      <Quiz view={viewModal} />
       <Text style={styles.logo}>FOMO</Text>
       <Text style={styles.title}>Welcome Back</Text>
       <View style={styles.inputContainer}>
@@ -70,7 +76,8 @@ export default function HomeScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    opacity: 1
+    opacity: 1,
+    backgroundColor: "black"
   },
 
   logo: {
