@@ -64,7 +64,7 @@ export default function HomeScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    opacity: 1
+    opacity: 0.9
   },
 
   logo: {
